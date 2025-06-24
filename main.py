@@ -1,6 +1,9 @@
 def hidden(matrix, n):
-    # Your implementation here!
-    pass
+    flat_matrix = [char for row in matrix for char in row]
+
+    message = ''.join(flat_matrix[i] for i in range(0, len(flat_matrix), n))
+
+    return message
 
 matrix_1 = (
     ('u','e','r','e', ' ', 'e'),
